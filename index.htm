@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moumouni Kabré — statisticien-économiste, suivi-évaluation</title>
+<meta name="description" content="Moumouni Kabré, statisticien-économiste. Suivi-évaluation, analyse de données et financement de projets de croissance verte, Abidjan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Newsreader:opsz,wght@6..72,300..500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papier:#e8ede9;
+    --papier-clair:#f2f5f1;
+    --encre:#143028;
+    --encre-doux:#4a6055;
+    --trait:#c2cec5;
+    --vert:#196b24;
+    --sarcelle:#00a87c;
+    --bleu:#156082;
+    --mesure:66ch;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{-webkit-text-size-adjust:100%;}
+
+  body{
+    margin:0;
+    background:var(--papier);
+    color:var(--encre);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:1.0625rem;
+    line-height:1.68;
+    font-optical-sizing:auto;
+  }
+
+  h1,h2,h3,.mecanique{
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-variation-settings:"wdth" 112;
+  }
+
+  a{color:var(--bleu);text-decoration-thickness:1px;text-underline-offset:3px;}
+  a:hover{color:var(--vert);}
+  a:focus-visible{outline:2px solid var(--vert);outline-offset:3px;border-radius:2px;}
+
+  .enveloppe{max-width:60rem;margin:0 auto;padding:0 1.75rem;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:5.5rem 0 4rem;
+    background-image:
+      linear-gradient(to right,rgba(20,48,40,.055) 1px,transparent 1px),
+      linear-gradient(to bottom,rgba(20,48,40,.055) 1px,transparent 1px);
+    background-size:26px 26px;
+    border-bottom:1px solid var(--trait);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(232,237,233,0) 55%,var(--papier) 100%);
+  }
+  .hero .enveloppe{position:relative;z-index:1;}
+
+  h1{
+    margin:0;
+    font-size:clamp(2.6rem,8.5vw,5.25rem);
+    font-weight:600;
+    font-variation-settings:"wdth" 120;
+    letter-spacing:-.022em;
+    line-height:.98;
+  }
+  h1 span{display:block;}
+  h1 .prenom{color:var(--encre-doux);font-weight:400;font-size:.62em;letter-spacing:-.01em;margin-bottom:.12em;}
+
+  .accroche{
+    margin:1.6rem 0 0;
+    max-width:34ch;
+    font-size:clamp(1.15rem,2.6vw,1.45rem);
+    line-height:1.45;
+    color:var(--encre);
+  }
+  .situation{
+    margin:1.5rem 0 0;
+    max-width:var(--mesure);
+    color:var(--encre-doux);
+  }
+
+  /* ---------- Sections ---------- */
+  section{padding:3.75rem 0;border-bottom:1px solid var(--trait);}
+  section:last-of-type{border-bottom:0;}
+
+  h2{
+    margin:0 0 1.75rem;
+    font-size:.98rem;
+    font-weight:600;
+    font-variation-settings:"wdth" 100;
+    letter-spacing:.01em;
+    color:var(--vert);
+  }
+
+  /* ---------- Parcours ---------- */
+  .parcours{list-style:none;margin:0;padding:0;display:grid;gap:2rem;}
+  @media (min-width:52rem){
+    .parcours{grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+  }
+  .etape{position:relative;padding-top:1.6rem;}
+  .etape::before{
+    content:"";position:absolute;top:0;left:0;
+    width:.55rem;height:.55rem;border-radius:50%;
+    background:var(--sarcelle);
+    box-shadow:0 0 0 4px var(--papier);
+  }
+  .etape::after{
+    content:"";position:absolute;top:.26rem;left:.55rem;right:-1.5rem;height:1px;
+    background:var(--trait);
+    transform-origin:left;
+  }
+  .parcours .etape:last-child::after{display:none;}
+  @media (max-width:51.99rem){
+    .etape::after{top:.55rem;left:.26rem;right:auto;width:1px;height:calc(100% + 2rem);}
+  }
+  .lieu{display:block;font-family:"Archivo",sans-serif;font-weight:600;font-size:1.02rem;font-variation-settings:"wdth" 108;}
+  .annees{display:block;font-family:"Archivo",sans-serif;font-size:.82rem;color:var(--encre-doux);margin:.1rem 0 .45rem;font-variant-numeric:tabular-nums;}
+  .etape p{margin:0;font-size:.97rem;line-height:1.55;color:var(--encre-doux);max-width:32ch;}
+
+  /* ---------- Métier ---------- */
+  .metier{margin:0;}
+  .metier div{
+    padding:1.4rem 0;
+    border-top:1px solid var(--trait);
+  }
+  .metier div:first-child{border-top:0;padding-top:0;}
+  .metier dt{
+    font-family:"Archivo",sans-serif;
+    font-weight:600;font-size:1.08rem;
+    font-variation-settings:"wdth" 108;
+    margin-bottom:.35rem;
+  }
+  .metier dd{margin:0;max-width:var(--mesure);color:var(--encre-doux);}
+
+  /* ---------- Outils ---------- */
+  .outils{display:grid;gap:1.75rem;margin:0;}
+  @media (min-width:44rem){.outils{grid-template-columns:repeat(3,1fr);gap:2.25rem;}}
+  .outils h3{
+    margin:0 0 .6rem;font-size:.9rem;font-weight:600;
+    font-variation-settings:"wdth" 100;color:var(--encre-doux);
+  }
+  .outils ul{list-style:none;margin:0;padding:0;font-size:.99rem;line-height:1.85;}
+
+  /* ---------- Langues ---------- */
+  .langues{display:flex;flex-wrap:wrap;gap:2.5rem;margin:0;padding:0;list-style:none;}
+  .langues li{font-size:1rem;}
+  .langues b{
+    display:block;font-family:"Archivo",sans-serif;font-weight:600;
+    font-variation-settings:"wdth" 108;
+  }
+  .langues span{color:var(--encre-doux);font-size:.95rem;}
+
+  /* ---------- Contact ---------- */
+  .contact p{max-width:var(--mesure);margin:0 0 1.5rem;}
+  .liens{display:flex;flex-wrap:wrap;gap:.75rem;margin:0;padding:0;list-style:none;}
+  .liens a{
+    display:inline-block;
+    font-family:"Archivo",sans-serif;font-size:.95rem;font-weight:500;
+    font-variation-settings:"wdth" 105;
+    padding:.55rem 1.1rem;
+    background:var(--papier-clair);
+    border:1px solid var(--trait);
+    border-radius:2rem;
+    color:var(--encre);
+    text-decoration:none;
+    transition:background .15s ease,border-color .15s ease;
+  }
+  .liens a:hover{background:#fff;border-color:var(--vert);color:var(--vert);}
+
+  footer{
+    padding:2.5rem 0 3.5rem;
+    font-family:"Archivo",sans-serif;
+    font-size:.85rem;
+    color:var(--encre-doux);
+    font-variation-settings:"wdth" 100;
+  }
+
+  /* ---------- Apparition unique au chargement ---------- */
+  @media (prefers-reduced-motion:no-preference){
+    .etape{opacity:0;animation:apparait .55s ease forwards;}
+    .etape:nth-child(1){animation-delay:.15s;}
+    .etape:nth-child(2){animation-delay:.3s;}
+    .etape:nth-child(3){animation-delay:.45s;}
+    .etape:nth-child(4){animation-delay:.6s;}
+    @keyframes apparait{to{opacity:1;}}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="enveloppe">
+    <h1><span class="prenom">Moumouni</span><span>Kabré</span></h1>
+    <p class="accroche">Statisticien-économiste. Je construis les systèmes qui disent si un projet tient réellement ses promesses.</p>
+    <p class="situation">Junior Professional Officer et data analyst au Global Green Growth Institute, à Abidjan. Je travaille sur le suivi-évaluation et la conception de projets de croissance verte en Afrique de l'Ouest — finance climatique, agro-industrie, entrepreneuriat vert.</p>
+  </div>
+</header>
+
+<main class="enveloppe">
+
+  <section aria-labelledby="t-parcours">
+    <h2 id="t-parcours">Parcours</h2>
+    <ol class="parcours">
+      <li class="etape">
+        <span class="lieu">Ouagadougou</span>
+        <span class="annees">Point de départ</span>
+        <p>Burkina Faso. Premiers travaux d'enquête et de terrain.</p>
+      </li>
+      <li class="etape">
+        <span class="lieu">Rabat</span>
+        <span class="annees">INSEA</span>
+        <p>Diplôme d'ingénieur statisticien-économiste.</p>
+      </li>
+      <li class="etape">
+        <span class="lieu">Toulouse</span>
+        <span class="annees">Toulouse 1 Capitole</span>
+        <p>Master 2 statistique et économétrie.</p>
+      </li>
+      <li class="etape">
+        <span class="lieu">Abidjan</span>
+        <span class="annees">Depuis 2025</span>
+        <p>GGGI Côte d'Ivoire — suivi-évaluation et analyse de données.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="t-metier">
+    <h2 id="t-metier">Ce que je fais</h2>
+    <dl class="metier">
+      <div>
+        <dt>Suivi, évaluation et apprentissage</dt>
+        <dd>Cadres logiques, plans MEL, indicateurs et outils de collecte. Je mets en place la chaîne complète, de la définition de l'indicateur au rapport au bailleur.</dd>
+      </div>
+      <div>
+        <dt>Analyse de données</dt>
+        <dd>Plans de sondage, traitement de la non-réponse, scoring de vulnérabilité, ciblage statistique. Syntaxes d'analyse harmonisées et reproductibles, tableaux de bord et rapports automatisés.</dd>
+      </div>
+      <div>
+        <dt>Conception et financement de projets</dt>
+        <dd>Notes conceptuelles, cadres de résultats et budgets pour des financements climat et développement. Renforcement des capacités des équipes et des partenaires nationaux.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="t-outils">
+    <h2 id="t-outils">Outils</h2>
+    <div class="outils">
+      <div>
+        <h3>Analyse</h3>
+        <ul>
+          <li>R</li>
+          <li>Python — pandas, scikit-learn</li>
+          <li>Stata</li>
+          <li>SPSS</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Restitution</h3>
+        <ul>
+          <li>Power BI</li>
+          <li>Tableau</li>
+          <li>ggplot2</li>
+          <li>Excel avancé, VBA</li>
+          <li>SIG</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Collecte</h3>
+        <ul>
+          <li>KoboToolbox</li>
+          <li>ODK</li>
+          <li>MoDA</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-langues">
+    <h2 id="t-langues">Langues</h2>
+    <ul class="langues">
+      <li><b>Français</b><span>Langue de travail</span></li>
+      <li><b>Anglais</b><span>Professionnel</span></li>
+      <li><b>Arabe</b><span>Notions</span></li>
+    </ul>
+  </section>
+
+  <section class="contact" aria-labelledby="t-contact">
+    <h2 id="t-contact">Me contacter</h2>
+    <p>Ouvert aux échanges sur le suivi-évaluation, la donnée au service des projets de développement et les financements climat.</p>
+    <ul class="liens">
+      <li><a href="mailto:mni.kabre@g">Écrire un courriel</a></li>
+      <li><a href="https://www.linkedin.com/in/VOTRE-PROFIL">LinkedIn</a></li>
+      <li><a href="https://github.com/VOTRE-COMPTE">GitHub</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="enveloppe">
+  Abidjan, Côte d'Ivoire
+</footer>
+
+</body>
+</html>
 
